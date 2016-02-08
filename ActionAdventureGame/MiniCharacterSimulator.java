@@ -11,5 +11,14 @@ public class MiniCharacterSimulator {
 
         Character troll = new Troll();
         troll.fight();
+
+        System.out.println("Setting behavior dynamically");
+
+        king.setWeapon(new BowAndArrowBehavior());
+        king.fight();
+        king.setWeapon(new KnifeBehavior());
+        king.fight();
+        king.setWeapon(new SwordBehavior());
+        king.fight();
     }
 }
